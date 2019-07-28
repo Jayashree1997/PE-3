@@ -1,16 +1,20 @@
-//package com.stackroute.pe3;
-//
-//public class RemoveVowels {
-//    int removeVowels(char arr[]) {
-//        int i;
-//        //move through each element of the array
-//        for (i = 1; arr[i] != '\0'; i++) {
-//            //if the last character was a vowel replace with the current
-//            //character
-//            if (arr[i] != 'a' || arr[i] != 'e' || arr[i] != 'i' || arr[i] != 'o' ||
-//                    arr[i] != 'u') {
-//                arr[i - 1] = arr[i];
-//            }
-//        }
-//    }
-//}
+package com.stackroute.pe3;
+public class RemoveVowels {
+
+    /**
+     * This method removes the vowels from s given list of words
+     * @param places
+     * @return result
+     */
+    public String[] checkVowel(String[] places){
+        String[] result=new String[places.length];
+
+        //Replaces the vowels
+        for (int i=0;i<places.length;i++){
+            result[i]=places[i].replaceAll("[aeiou]","");
+        }
+
+        //returns the resulting changed values
+        return result;
+    }
+}
